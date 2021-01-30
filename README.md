@@ -88,9 +88,21 @@ It consists of 3 subdirectories in virtual lab, namely, skywater-pdk, open_pdks,
 
 #### Starting Openlane
 To invoke openlane go to openlane_flow directory and type `./flow.tcl -interactive`.
+
 ![starting openlane](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/1%20(3).png)
 
 After that to import all the packages required to run this flow use `package require openlane 0.9`
+
+#### Prepare Design
+The designs that run within Openlane are extracted from design folder under openlane_flow directory. Any of the available designs can be chosen. We'll be using picorv32a design for this workshop. To make file for any design use `prep -design <design name>`. As we'll be using picorv32a we'll use command `prep -design picorv32a`.
+
+![preparing design](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/2%20(2).png)
+
+This command merges the lef files ie, cell LEF and technology LEF and creates `merge.lef`. Technology LEF contains layer definitions and a set of restricted design rules. The cell LEF contains information of each standard cells.
+
+![after prep run](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/6%20(2).png)
+
+If we use the previous command ie, `prep -design picorv32a -tag trial`, then this will create a file named `trial` under `runs` directory under the same design, in this case under `picorv32a`. So, generally to create a custom folder use `prep -design <design name> -tag <custom folder name>`
 
 
 
