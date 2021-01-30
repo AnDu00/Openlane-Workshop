@@ -82,8 +82,15 @@ This optimized circuit is mapped using `abc`.
 
 ### Inception of Open-Source EDA, OpenLANE and Sky130 PDK
 ---
+#### Skywater PDK files
+PDK ie, Process Design kit is the interface between fab and designers which contains the files needed to model a fabrication process to design IC. For example, Skywater130 is 130nm PDK files.
+It consists of 3 subdirectories in virtual lab, namely, skywater-pdk, open_pdks, sky130A.
 
+#### Starting Openlane
+To invoke openlane go to openlane_flow directory and type `./flow.tcl -interactive`.
+![starting openlane](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/1%20(3).png)
 
+After that to import all the packages required to run this flow use `package require openlane 0.9`
 
 
 
