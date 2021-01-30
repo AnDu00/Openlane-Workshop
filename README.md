@@ -41,8 +41,21 @@ ASIC design flow is an iterative process and the design flow changes depending u
 ![RTL to GDSII Flow](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/RTL%20to%20GDSII%20flow.PNG)
 
 * Chip Specification : Chip specifications are basically the desired requirements of the chip.
-* Design Entry/ Functional Verification : In this stage the RTL and Behavioral modelling are performed using Hardware Description Languages(HDLs), mainly using verilog.
-* RTL Synthesis : 
+* Design Entry/ Functional Verification : In this stage, the RTL and Behavioral modelling are performed using Hardware Description Languages(HDLs), mainly using verilog.
+* RTL Synthesis : In this step, the Behavioral model is implemented in terms of netlist ie, Structural modelling is performed.
+* Partitioning of Chip : In this step, fixing of boundary of certain sections of the chip is done.
+* DFT insertion : Design for Test circuit insertion is done.
+* FloorPlanning : The goal of this step is to plan silicon area and creation of robust Power Distribution Network(PDN) in order to supply power to each of the individual.
+* Placement : In this step, the positions of standard cells get fixed. Placement happens in two steps: 1. Global Placement 2. Detailed Placement. Global Placement tries to find the optimal positions for cells and they may be overlapping. Detailed Placement takes Global Placement and legalizes the problem.
+* Clock Tree Synthesis : In this step a clock tree is generated in order to provide clock signal to sequential elements.
+* Routing Stage : In this step, the interconnection system between standard cells are implemented.
+* Final Verification : A final verification is done before sending the chip to the fab.
+* GDSII : GDS ie, Graphic Design System contains the layout of the chip.
+
+
+### Openlane Flow
+---
+
 
 
 ### Contact
