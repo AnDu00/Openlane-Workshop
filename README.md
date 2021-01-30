@@ -55,8 +55,11 @@ ASIC design flow is an iterative process and the design flow changes depending u
 
 ### Openlane Flow
 ---
-The openlane flow is shown in the figure below:
+The Openlane ASIC flow is shown in the figure below:
+
 ![openlane flow](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/Openlane%20flow.PNG)
+
+Openlane ASIC flow has several steps.
 
 
 ### Contact
