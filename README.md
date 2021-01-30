@@ -36,6 +36,7 @@ For installation refer to:
 
 ### RTL to GDSII Flow
 ---
+ASIC design flow is an iterative process and the design flow changes depending upon our requirements for example, IP requirements, DFT insertion etc. This flow can be classified into 11 steps as shown below.
 
 
 
