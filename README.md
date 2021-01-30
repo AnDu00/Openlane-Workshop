@@ -59,7 +59,33 @@ The Openlane ASIC flow is shown in the figure below:
 
 ![openlane flow](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/Openlane%20flow.PNG)
 
-Openlane ASIC flow has several steps.
+Openlane ASIC flow has several steps. The flow starts with RTL and ends withs GDSII. Openlane is based on several open source projects like abc,OpenROAD, yosys, QFlow etc.
+* Synthesis : This RTL synthesis is done by yosys. `yosys` generates logic circuits using RTL code. This cicuit can be optimized furthur.
+This optimized circuit is mapped using `abc`.
+`OpenSTA` performs static timing analysis on the resulting circuit.
+* Floorplan : `Init_fp` defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing).
+`ioplacer` places the macro input and output ports.
+`PDN` generates power distribution network.
+`tapcell` inserts welltap and decap cells in the floorplan.
+* Placement : `Replace` is used to perform global placement.
+`Resizer` performs optional optimizations of the circuit.
+`OpenPhySyn` performs timing optimizations.
+`OpenDP` perfroms detailed placement to legalize the globally placed components.
+* CTS : `TritonCTS` synthesizes the clock distribution network.
+* Routing : `FastRoute` performs global routing to generate a guide file for the detailed router.
+`TritonRoute` performs detailed routing from global routing guides.
+`SPEF-Extractor` performs SPEF extraction.
+* GDSII : `Magic` is used to show the final layout.
+`Magic` performs DRC(Design rule checking) and spice extraction from layout.
+`Netgen` is used to perform LVS(Layout vs Schematic).
+
+
+### Inception of Open-Source EDA, OpenLANE and Sky130 PDK
+---
+
+
+
+
 
 
 ### Contact
