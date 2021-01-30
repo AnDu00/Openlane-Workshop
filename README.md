@@ -104,6 +104,17 @@ This command merges the lef files ie, cell LEF and technology LEF and creates `m
 
 If we use the previous command ie, `prep -design picorv32a -tag trial`, then this will create a file named `trial` under `runs` directory under the same design, in this case under `picorv32a`. So, generally to create a custom folder use `prep -design <design name> -tag <custom folder name>`
 
+![trial folder created](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/7%20(2).png)
+
+#### Synthesis
+To run synthesis use `run_synthesis`. As mentioned above `yosys` and `abc` are used in synthesis. After synthesis is done from the synthesis statistics report we can find the elements present in the design.
+
+![statistics](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/4%20(2).png)
+
+![chip area](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/5%20(2).png)
+
+### Floorplanning and Standard cells
+---
 
 
 
