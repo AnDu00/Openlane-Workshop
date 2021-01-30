@@ -115,8 +115,14 @@ To run synthesis use `run_synthesis`. As mentioned above `yosys` and `abc` are u
 
 ### Floorplanning and Standard cells
 ---
-####Floorplan
+#### Floorplan
 
+In this stage several things are done:
+
+* The die and core area is set
+* Placing of macros and io pins are done
+* Aspect ratio and core utilization factors are checked
+* Power distribution network is generated. But in case of openlane this step is done later after clock tree synthesis(CTS)
 
 
 ### Contact
