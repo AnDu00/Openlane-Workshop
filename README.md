@@ -38,7 +38,11 @@ For installation refer to:
 ---
 ASIC design flow is an iterative process and the design flow changes depending upon our requirements for example, IP requirements, DFT insertion etc. This flow can be classified into 11 steps as shown below.
 
+![RTL to GDSII Flow](https://github.com/AnDu00/Openlane-Workshop/blob/main/Images/RTL%20to%20GDSII%20flow.PNG)
 
+* Chip Specification : Chip specifications are basically the desired requirements of the chip.
+* Design Entry/ Functional Verification : In this stage the RTL and Behavioral modelling are performed using Hardware Description Languages(HDLs), mainly using verilog.
+* RTL Synthesis : 
 
 
 ### Contact
